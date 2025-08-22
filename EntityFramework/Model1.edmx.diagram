@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="68a07bb214b848509fdc9a63b2c346cb" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="AapCourseModel.Country" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AapCourseModel.Department" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AapCourseModel.Student" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AapCourseModel.StudentTeacher" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AapCourseModel.Teacher" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="AapCourseModel.FK_Students_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="AapCourseModel.FK_StudentTeacher_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="AapCourseModel.FK_StudentTeacher_StudentTeacher" ManuallyRouted="false" />
+        <AssociationConnector Association="AapCourseModel.FK_StudentTeacher_StudentTeacher1" ManuallyRouted="false" />
+        <AssociationConnector Association="AapCourseModel.FK_StudentTeacher_Students1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

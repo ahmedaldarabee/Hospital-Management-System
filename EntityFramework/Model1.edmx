@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AapCourseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentName" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataOFBirth" Type="date" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="isDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="StudentTeacher">
+          <Key>
+            <PropertyRef Name="StudentTeacherID" />
+          </Key>
+          <Property Name="StudentTeacherID" Type="int" Nullable="false" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="TecherId" Type="int" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="int" Nullable="false" />
+          <Property Name="TeacherName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Students_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTeacher_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+          <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentTeacher">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AapCourseModelStoreContainer">
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentTeacher" EntityType="Self.StudentTeacher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Students_Country" Association="Self.FK_Students_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTeacher_Students" Association="Self.FK_StudentTeacher_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentTeacher" EntitySet="StudentTeacher" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AapCourseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Students_Country" FromRole="Country" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataOFBirth" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <NavigationProperty Name="Country" Relationship="Self.FK_Students_Country" FromRole="Students" ToRole="Country" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="StudentTeachers" Relationship="AapCourseModel.FK_StudentTeacher_Students1" FromRole="Student" ToRole="StudentTeacher" />
+          <Property Name="isDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="StudentTeacher">
+          <Key>
+            <PropertyRef Name="StudentTeacherID" />
+          </Key>
+          <Property Name="StudentTeacherID" Type="Int32" Nullable="false" />
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="TecherId" Type="Int32" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_StudentTeacher_Students" FromRole="StudentTeacher" ToRole="Teacher" />
+          <NavigationProperty Name="StudentTeacher1" Relationship="Self.FK_StudentTeacher_StudentTeacher" FromRole="StudentTeacher" ToRole="StudentTeacher1" />
+          <NavigationProperty Name="StudentTeacher2" Relationship="Self.FK_StudentTeacher_StudentTeacher" FromRole="StudentTeacher1" ToRole="StudentTeacher" />
+          <NavigationProperty Name="StudentTeacher11" Relationship="Self.FK_StudentTeacher_StudentTeacher1" FromRole="StudentTeacher" ToRole="StudentTeacher1" />
+          <NavigationProperty Name="StudentTeacher3" Relationship="Self.FK_StudentTeacher_StudentTeacher1" FromRole="StudentTeacher1" ToRole="StudentTeacher" />
+          <NavigationProperty Name="Student" Relationship="AapCourseModel.FK_StudentTeacher_Students1" FromRole="StudentTeacher" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="Int32" Nullable="false" />
+          <Property Name="TeacherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="StudentTeachers" Relationship="Self.FK_StudentTeacher_Students" FromRole="Teacher" ToRole="StudentTeacher" />
+        </EntityType>
+        <Association Name="FK_Students_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTeacher_Students">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="StudentTeacher">
+              <PropertyRef Name="TecherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTeacher_StudentTeacher">
+          <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="1" />
+          <End Role="StudentTeacher1" Type="Self.StudentTeacher" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="StudentTeacher">
+              <PropertyRef Name="StudentTeacherID" />
+            </Principal>
+            <Dependent Role="StudentTeacher1">
+              <PropertyRef Name="StudentTeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentTeacher_StudentTeacher1">
+          <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="1" />
+          <End Role="StudentTeacher1" Type="Self.StudentTeacher" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="StudentTeacher">
+              <PropertyRef Name="StudentTeacherID" />
+            </Principal>
+            <Dependent Role="StudentTeacher1">
+              <PropertyRef Name="StudentTeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AapCourseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Countries" EntityType="Self.Country" />
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="StudentTeachers" EntityType="Self.StudentTeacher" />
+          <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+          <AssociationSet Name="FK_Students_Country" Association="Self.FK_Students_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTeacher_Students" Association="Self.FK_StudentTeacher_Students">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="StudentTeacher" EntitySet="StudentTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTeacher_StudentTeacher" Association="Self.FK_StudentTeacher_StudentTeacher">
+            <End Role="StudentTeacher" EntitySet="StudentTeachers" />
+            <End Role="StudentTeacher1" EntitySet="StudentTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTeacher_StudentTeacher1" Association="Self.FK_StudentTeacher_StudentTeacher1">
+            <End Role="StudentTeacher" EntitySet="StudentTeachers" />
+            <End Role="StudentTeacher1" EntitySet="StudentTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentTeacher_Students1" Association="AapCourseModel.FK_StudentTeacher_Students1">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="StudentTeacher" EntitySet="StudentTeachers" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_StudentTeacher_Students1">
+          <End Type="AapCourseModel.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="AapCourseModel.StudentTeacher" Role="StudentTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentTeacher">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AapCourseModelStoreContainer" CdmEntityContainer="AapCourseEntities">
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="AapCourseModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="AapCourseModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="AapCourseModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DataOFBirth" ColumnName="DataOFBirth" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentTeachers">
+            <EntityTypeMapping TypeName="AapCourseModel.StudentTeacher">
+              <MappingFragment StoreEntitySet="StudentTeacher">
+                <ScalarProperty Name="StudentTeacherID" ColumnName="StudentTeacherID" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="TecherId" ColumnName="TecherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teachers">
+            <EntityTypeMapping TypeName="AapCourseModel.Teacher">
+              <MappingFragment StoreEntitySet="Teacher">
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

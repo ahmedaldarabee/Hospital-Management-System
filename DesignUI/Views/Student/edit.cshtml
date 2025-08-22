@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model DesignUI.Models.StudentModel
+
+<html>
+<hrad></hrad>
+<body>
+
+    <form asp-action="UpdateStudent">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="text-danger">*</span>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <label>Enter First Name</label>
+                <input asp-for="FirstName" id="username" maxlength="20" type="text" class="form-control" />
+            </div>
+
+            <div class="col-md-4">
+                <label>Enter Last Name</label>
+                <input asp-for="LastName" type="text" class="form-control" />
+            </div>
+
+            <div class="col-md-4">
+                <label>Enter Your Email</label>
+                <input asp-for="Email" type="text" class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <input type="hidden" asp-for="StudentId"/>
+                <input type="submit" value="update" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</body>
+
+    @section Scripts {
+       @{
+         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+      }
+    }
+</html>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AapCourseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataOFBirth" Type="date" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentTeacher">
+    <Key>
+      <PropertyRef Name="StudentTeacherID" />
+    </Key>
+    <Property Name="StudentTeacherID" Type="int" Nullable="false" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="TecherId" Type="int" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="TeacherName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Students_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentTeacher_Students">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentTeacher">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AapCourseModelStoreContainer">
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentTeacher" EntityType="Self.StudentTeacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Students_Country" Association="Self.FK_Students_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentTeacher_Students" Association="Self.FK_StudentTeacher_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentTeacher" EntitySet="StudentTeacher" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
