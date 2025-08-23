@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<HospitalManagementSystem.Models.DoctorModel>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+
+    <body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-nowrap" scope="col">First Name</th>
+                <th class="text-nowrap" scope="col">Last Name</th>
+                <th class="text-nowrap" scope="col">Gender</th>
+                <th class="text-nowrap" scope="col">JoinDate</th>
+                <th class="text-nowrap" scope="col">Salary</th>
+                <th class="text-nowrap" scope="col">Mobile</th>
+                <th class="text-nowrap" scope="col">Shift Name</th>
+                <th class="text-nowrap" scope="col">Specialization Name</th>
+                <th class="text-nowrap" scope="col">YearsOfExperience</th>
+                <th class="text-nowrap" scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (HospitalManagementSystem.Models.DoctorModel data in Model){
+                <tr>
+                    <th class="text-center" scope="row">@data.FirstName</th>
+                    <td class="text-center">@data.LastName</td>
+                    <td class="text-center">@data.Gender</td>
+                    <td class="text-center">@data.JoinDate</td>
+                    <td class="text-center">@data.Salary</td>
+                    <td class="text-center">@data.Mobile</td>
+                    <td class="text-center">@data.ShiftName</td>
+                    <td class="text-center">@data.SpecializationName</td>
+                    <td class="text-center">@data.YearsOfExperience</td>
+                    <td class="text-center">
+                        <a asp-controller="Doctor" asp-action="Edit" >
+                            <i class="fa-solid fa-pen"></i> edit
+                        </a>
+                        <a asp-controller="Doctor" asp-action="Delete">
+                            <i class="fa-solid fa-trash"></i> delete
+                        </a>
+                    </td>
+                 </tr>
+            }
+
+        </tbody>
+    </table>
+    </body>
+</html>

@@ -450,3 +450,4 @@ C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HospitalManagementSyst
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.pdb
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HospitalManagementSystem\obj\Debug\net8.0\ref\HospitalManagementSystem.dll
+C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.sourcelink.json
