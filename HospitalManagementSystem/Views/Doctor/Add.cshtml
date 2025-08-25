@@ -26,8 +26,8 @@
                         Gender
                         <span class="text-danger">*</span>
                         <div>
-                            <input type="radio" asp-for="Gender" value="1" /> Male
-                            <input type="radio" asp-for="Gender" value="2" /> Female
+                            <input type="radio" asp-for="Gender" value="true" /> Male
+                            <input type="radio" asp-for="Gender" value="false" /> Female
                         </div>
                         <span asp-validation-for="Gender" class="text-danger"></span>
                     </div>
@@ -83,7 +83,7 @@
 
                 <div style="margin:10px" class="row">
                     <div class="col-md-12">
-                        <input type="submit" value="submit" />
+                        <input type="submit" value="Submit" />
                     </div>                
                 </div>
             

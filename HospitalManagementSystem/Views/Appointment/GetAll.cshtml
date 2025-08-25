@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<HospitalManagementSystem.Models.AppointmentModel>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-nowrap" scope="col">Doctor Name</th>
+                    <th class="text-nowrap" scope="col">Day</th>
+                    <th class="text-nowrap" scope="col">Start Time</th>
+                    <th class="text-nowrap" scope="col">End Time</th>
+                    <th class="text-nowrap" scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (HospitalManagementSystem.Models.AppointmentModel data in Model){
+                    <tr>
+                        <th class="text-center" scope="row">@data.DoctorName</th>
+                        @* <td class="text-center">@data.Day</td>
+                        <td class="text-center">@data.StartTime</td>
+                        <td class="text-center">@data.EndTime</td> *@
+                   
+                        <td>
+                            <a asp-route-Id="@data.DoctorId" asp-controller="Appointment" asp-action="Edit">
+                                <i class="fa fa-pencil-square-o"></i>
+                            </a>
+                            <a asp-route-Id="@data.DoctorId" asp-controller="Appointment" asp-action="Delete">
+                                <i class="fa fa-trash-o"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </body>
+</html>

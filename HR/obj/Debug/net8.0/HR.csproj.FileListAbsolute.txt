@@ -5,6 +5,7 @@ C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR.AssemblyInfoInputs.cache
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR.AssemblyInfo.cs
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR.sourcelink.json
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR.dll
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\refint\HR.dll
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\HR\obj\Debug\net8.0\HR.pdb

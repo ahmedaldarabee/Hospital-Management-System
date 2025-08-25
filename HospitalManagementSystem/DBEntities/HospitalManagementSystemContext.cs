@@ -25,6 +25,8 @@ public partial class HospitalManagementSystemContext : DbContext
 
     public virtual DbSet<Employee> Employees { get; set; }
 
+    public virtual DbSet<Error> Errors { get; set; }
+
     public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
 
     public virtual DbSet<InvoiceMaster> InvoiceMasters { get; set; }
@@ -109,6 +111,13 @@ public partial class HospitalManagementSystemContext : DbContext
             entity.HasOne(d => d.Section).WithMany(p => p.Employees)
                 .HasForeignKey(d => d.SectionId)
                 .HasConstraintName("FK_Employees_Sections");
+        });
+
+        modelBuilder.Entity<Error>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Errors_1");
+
+            entity.Property(e => e.TransactionDate).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<InvoiceDetail>(entity =>

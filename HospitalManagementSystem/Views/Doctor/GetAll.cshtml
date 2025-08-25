@@ -8,13 +8,11 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-              crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
+    <a href="Add">Add new doctor</a>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -42,12 +40,12 @@
                     <td class="text-center">@data.ShiftName</td>
                     <td class="text-center">@data.SpecializationName</td>
                     <td class="text-center">@data.YearsOfExperience</td>
-                    <td class="text-center">
-                        <a asp-controller="Doctor" asp-action="Edit" >
-                            <i class="fa-solid fa-pen"></i> edit
+                    <td >
+                        <a asp-route-Id="@data.DoctorId" asp-controller="Doctor" asp-action="Edit">
+                            <i class="fa fa-pencil-square-o"></i> 
                         </a>
-                        <a asp-controller="Doctor" asp-action="Delete">
-                            <i class="fa-solid fa-trash"></i> delete
+                        <a asp-route-Id="@data.DoctorId" asp-controller="Doctor" asp-action="Delete">
+                            <i class="fa fa-trash-o"></i> 
                         </a>
                     </td>
                  </tr>

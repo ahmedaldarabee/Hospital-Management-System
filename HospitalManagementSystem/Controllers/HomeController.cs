@@ -18,6 +18,11 @@ namespace HospitalManagementSystem.Controllers
             return View();
         }
 
+        public IActionResult ErrorLog()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

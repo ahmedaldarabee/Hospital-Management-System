@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\views\\appointment\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\appointment\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\models\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\models\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\views\\doctor\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\views\\doctor\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\dbentities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\dbentities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\models\\doctormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\models\\doctormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|c:\\users\\dell\\desktop\\courses\\asp.net\\introduction\\second\\hospitalmanagementsystem\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2055FA1B-5D2E-4F8E-AE51-6CFB7FF4AE17}|HospitalManagementSystem\\HospitalManagementSystem.csproj|solutionrelative:hospitalmanagementsystem\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,54 +59,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DoctorModel.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Models\\DoctorModel.cs",
-              "RelativeDocumentMoniker": "HospitalManagementSystem\\Models\\DoctorModel.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Models\\DoctorModel.cs",
-              "RelativeToolTip": "HospitalManagementSystem\\Models\\DoctorModel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAUwCMAAAAdAAAAAAAAAA==",
+              "Title": "AppointmentModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Models\\AppointmentModel.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Models\\AppointmentModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Models\\AppointmentModel.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Models\\AppointmentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T12:39:11.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-24T19:10:36.062Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\DBEntities\\Doctor.cs",
-              "RelativeDocumentMoniker": "HospitalManagementSystem\\DBEntities\\Doctor.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\DBEntities\\Doctor.cs",
-              "RelativeToolTip": "HospitalManagementSystem\\DBEntities\\Doctor.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA8wBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T12:36:55.46Z",
-              "EditorCaption": ""
+              "Title": "GetAll.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Views\\Appointment\\GetAll.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Appointment\\GetAll.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Views\\Appointment\\GetAll.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Appointment\\GetAll.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-24T19:09:55.045Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetAll.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
-              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
-              "RelativeToolTip": "HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwCcAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-23T12:20:22.433Z",
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "HospitalManagementSystem\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T19:08:21.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DoctorController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Controllers\\DoctorController.cs",
-              "RelativeDocumentMoniker": "HospitalManagementSystem\\Controllers\\DoctorController.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Controllers\\DoctorController.cs",
-              "RelativeToolTip": "HospitalManagementSystem\\Controllers\\DoctorController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAzwE0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T08:37:48.323Z",
-              "EditorCaption": ""
+              "Title": "GetAll.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
+              "RelativeDocumentMoniker": "HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Courses\\ASP.NET\\Introduction\\Second\\HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
+              "RelativeToolTip": "HospitalManagementSystem\\Views\\Doctor\\GetAll.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-23T14:54:29.869Z"
             }
           ]
         }

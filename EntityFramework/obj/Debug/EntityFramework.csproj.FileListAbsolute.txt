@@ -10,4 +10,3 @@ C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\EntityFramework\obj\De
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\EntityFramework\obj\Debug\EntityFr.4B064B60.Up2Date
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\EntityFramework\obj\Debug\EntityFramework.exe
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\EntityFramework\obj\Debug\EntityFramework.pdb
-C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\EntityFramework\obj\Debug\EntityFramework.exe.config

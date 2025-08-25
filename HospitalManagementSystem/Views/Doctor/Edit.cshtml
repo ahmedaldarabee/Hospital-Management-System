@@ -3,3 +3,104 @@
 *@
 @{
 }
+@model HospitalManagementSystem.Models.DoctorModel
+
+<html>
+<head> </head>
+<body>
+    <div class="container">
+        <form asp-action="UpdateDoctor">
+            <div style="margin:10px" class="row">
+                <div class="col-md-4">
+                    First name
+                    <span class="text-danger">*</span>
+                    <input type="text" asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    Last name
+                    <span class="text-danger">*</span>
+                    <input type="text" asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    Gender
+                    <span class="text-danger">*</span>
+                    <div>
+                        <input type="radio" asp-for="Gender" value="true" /> Male
+                        <input type="radio" asp-for="Gender" value="false" /> Female
+                    </div>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div style="margin:10px" class="row">
+                <div class="col-md-4">
+                    Join Date
+                    <span class="text-danger">*</span>
+                    <input type="date" asp-for="JoinDate" class="form-control" />
+                    <span asp-validation-for="JoinDate" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    Salary
+                    <span class="text-danger">*</span>
+                    <input type="text" asp-for="Salary" class="form-control" />
+                    <span asp-validation-for="Salary" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    Mobile
+                    <span class="text-danger">*</span>
+                    <input type="text" asp-for="Mobile" class="form-control" maxlength="10" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div style="margin:10px" class="row">
+                <div class="col-md-4">
+                    Shift Type Name
+                    <span class="text-danger">*</span>
+                    <select asp-for="ShiftTypeId" class="form-select" asp-items="@(new SelectList(ViewBag.shift, "Id", "Name"))">
+                        <option selected value="">Select Here</option>
+                    </select>
+                    <span asp-validation-for="ShiftTypeId" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    Specialization Name
+                    <span class="text-danger">*</span>
+                    <select asp-for="SpecializationId" class="form-select" asp-items="@(new SelectList(ViewBag.Specialization, "Id", "Name"))">
+                        <option selected value="">Select Here</option>
+                    </select>
+                    <span asp-validation-for="SpecializationId" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    Years Of Experience
+                    <span class="text-danger">*</span>
+                    <input type="number" asp-for="YearsOfExperience" class="form-control" />
+                    <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div style="margin:10px" class="row">
+                <div class="col-md-4">
+                    <!-- input as hidden mandatory section to define section that required change based on own id-->
+                    <input type="hidden" asp-for="DoctorId"/>
+                    <input type="submit" value="Update" />
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+
+    @section Scripts {
+
+            @{
+                    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                            // @ that used when you want to write C# Code.
+                            // Scripts that used also here to write JS Code in this page.
+            }
+    }
+</html>

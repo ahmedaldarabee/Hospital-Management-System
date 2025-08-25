@@ -10,6 +10,7 @@ C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\n
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\ProjectOne.AssemblyInfoInputs.cache
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\ProjectOne.AssemblyInfo.cs
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\ProjectOne.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\ProjectOne.sourcelink.json
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\ProjectOne.csproj.Up2Date
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\ProjectOne.dll
 C:\Users\DELL\Desktop\Courses\ASP.NET\Introduction\Second\ProjectOne\obj\Debug\net8.0\refint\ProjectOne.dll
